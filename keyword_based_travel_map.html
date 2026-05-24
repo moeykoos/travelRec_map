@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_ae2eecc5182089a915c0c4e1dca5c2bf {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+    <script src="https://cdn.jsdelivr.net/npm/leaflet-ant-path@1.1.2/dist/leaflet-ant-path.min.js"></script>
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_ae2eecc5182089a915c0c4e1dca5c2bf" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_ae2eecc5182089a915c0c4e1dca5c2bf = L.map(
+                "map_ae2eecc5182089a915c0c4e1dca5c2bf",
+                {
+                    center: [37.53846127, 126.9992941],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 15,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_721eea623b7b590dbc081e3613362c92 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_721eea623b7b590dbc081e3613362c92.addTo(map_ae2eecc5182089a915c0c4e1dca5c2bf);
+        
+    
+            var marker_691546fa05d3678421486025afc57984 = L.marker(
+                [37.53846127, 126.9992941],
+                {
+}
+            ).addTo(map_ae2eecc5182089a915c0c4e1dca5c2bf);
+        
+    
+            var icon_5b282573a2f1673b8798c8f2c3b5f02e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "darkblue",
+  "iconColor": "white",
+  "icon": "play",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_58a5ebd880dec671581f998e2ac83444 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_0ed34c0d1bc9f7d02ff449179de3f7ae = $(`<div id="html_0ed34c0d1bc9f7d02ff449179de3f7ae" style="width: 100.0%; height: 100.0%;"><b>🛫 [출발지]</b><br><b>리움미술관</b><br>주소: 서울특별시 용산구 이태원로55길 60-16 (한남동)</div>`)[0];
+                popup_58a5ebd880dec671581f998e2ac83444.setContent(html_0ed34c0d1bc9f7d02ff449179de3f7ae);
+            
+        
+
+        marker_691546fa05d3678421486025afc57984.bindPopup(popup_58a5ebd880dec671581f998e2ac83444)
+        ;
+
+        
+    
+    
+            marker_691546fa05d3678421486025afc57984.bindTooltip(
+                `<div>
+                     1단계: 리움미술관
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_691546fa05d3678421486025afc57984.setIcon(icon_5b282573a2f1673b8798c8f2c3b5f02e);
+            
+    
+            var marker_8e8faad61633bdce139be0b7a68279f5 = L.marker(
+                [37.54006435, 126.9938552],
+                {
+}
+            ).addTo(map_ae2eecc5182089a915c0c4e1dca5c2bf);
+        
+    
+            var icon_19be63136e7eaca55571c39f5fd8a0a7 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "cutlery",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_536757ceb80d191278a71c0fb5079af0 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_3e8a85ce0882dbca80c95ae955cf049a = $(`<div id="html_3e8a85ce0882dbca80c95ae955cf049a" style="width: 100.0%; height: 100.0%;"><b>[AI 추천 핫플]</b><br><b>★ 쉐시몽</b><br>Pacer 핫플 - 테마: 미쉐린 가이드 서울 2<br>주소: 서울특별시 용산구 이태원동 239-4 B동 3층</div>`)[0];
+                popup_536757ceb80d191278a71c0fb5079af0.setContent(html_3e8a85ce0882dbca80c95ae955cf049a);
+            
+        
+
+        marker_8e8faad61633bdce139be0b7a68279f5.bindPopup(popup_536757ceb80d191278a71c0fb5079af0)
+        ;
+
+        
+    
+    
+            marker_8e8faad61633bdce139be0b7a68279f5.bindTooltip(
+                `<div>
+                     2단계: ★ 쉐시몽
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_8e8faad61633bdce139be0b7a68279f5.setIcon(icon_19be63136e7eaca55571c39f5fd8a0a7);
+            
+    
+            var marker_5d26a4365b5863a5281ff3083a936d9f = L.marker(
+                [37.54026621, 126.9915273],
+                {
+}
+            ).addTo(map_ae2eecc5182089a915c0c4e1dca5c2bf);
+        
+    
+            var icon_8e22e98161d91d6f1cd568537cc3899d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_5c44909e3d03d810eafd78a81120333a = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_912eaa035be9883c2c229721056983c0 = $(`<div id="html_912eaa035be9883c2c229721056983c0" style="width: 100.0%; height: 100.0%;"><b>[AI 창조 관광지]</b><br><b>3. 남산 야외식물원</b><br>주소: 서울특별시 용산구 이태원동</div>`)[0];
+                popup_5c44909e3d03d810eafd78a81120333a.setContent(html_912eaa035be9883c2c229721056983c0);
+            
+        
+
+        marker_5d26a4365b5863a5281ff3083a936d9f.bindPopup(popup_5c44909e3d03d810eafd78a81120333a)
+        ;
+
+        
+    
+    
+            marker_5d26a4365b5863a5281ff3083a936d9f.bindTooltip(
+                `<div>
+                     3단계: 남산 야외식물원
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_5d26a4365b5863a5281ff3083a936d9f.setIcon(icon_8e22e98161d91d6f1cd568537cc3899d);
+            
+    
+            var marker_863004f2b13beabb3c0b89dda407dcf9 = L.marker(
+                [37.54107944, 126.9913363],
+                {
+}
+            ).addTo(map_ae2eecc5182089a915c0c4e1dca5c2bf);
+        
+    
+            var icon_73f9aab2bb672a026dd14e8d266ec215 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "cutlery",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_4e1616d063e7de40df8ef6e822e2257a = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_5d46e417fd6af2b52e4f0e73385f5856 = $(`<div id="html_5d46e417fd6af2b52e4f0e73385f5856" style="width: 100.0%; height: 100.0%;"><b>[AI 추천 핫플]</b><br><b>★ 부처스밸리</b><br>Pacer 핫플 - 테마: 우직하게 한점씩, 한우<br>주소: 서울 용산구 회나무로13가길 33</div>`)[0];
+                popup_4e1616d063e7de40df8ef6e822e2257a.setContent(html_5d46e417fd6af2b52e4f0e73385f5856);
+            
+        
+
+        marker_863004f2b13beabb3c0b89dda407dcf9.bindPopup(popup_4e1616d063e7de40df8ef6e822e2257a)
+        ;
+
+        
+    
+    
+            marker_863004f2b13beabb3c0b89dda407dcf9.bindTooltip(
+                `<div>
+                     4단계: ★ 부처스밸리
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_863004f2b13beabb3c0b89dda407dcf9.setIcon(icon_73f9aab2bb672a026dd14e8d266ec215);
+            
+    
+            var marker_a0860bc5be5666a8b6bceefb9c9875c4 = L.marker(
+                [37.54164344, 126.9871174],
+                {
+}
+            ).addTo(map_ae2eecc5182089a915c0c4e1dca5c2bf);
+        
+    
+            var icon_949a0df110c35041e0e26ed82c8d17ea = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_acb51d31aba57d7c082621d6c72365fb = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_89ad4a5d434388d4f49122aaf9850c6c = $(`<div id="html_89ad4a5d434388d4f49122aaf9850c6c" style="width: 100.0%; height: 100.0%;"><b>[AI 창조 관광지]</b><br><b>5. 카사블랑카</b><br>주소: 서울특별시 용산구 신흥로 35 (용산동2가)</div>`)[0];
+                popup_acb51d31aba57d7c082621d6c72365fb.setContent(html_89ad4a5d434388d4f49122aaf9850c6c);
+            
+        
+
+        marker_a0860bc5be5666a8b6bceefb9c9875c4.bindPopup(popup_acb51d31aba57d7c082621d6c72365fb)
+        ;
+
+        
+    
+    
+            marker_a0860bc5be5666a8b6bceefb9c9875c4.bindTooltip(
+                `<div>
+                     5단계: 카사블랑카
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_a0860bc5be5666a8b6bceefb9c9875c4.setIcon(icon_949a0df110c35041e0e26ed82c8d17ea);
+            
+    
+            var marker_078634c2f06ca7c343ad888c2d670bb9 = L.marker(
+                [37.54327968, 126.9850528],
+                {
+}
+            ).addTo(map_ae2eecc5182089a915c0c4e1dca5c2bf);
+        
+    
+            var icon_27834076cf6e3a9ac192902dae92c825 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "cutlery",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_3406e4a5a4b8f62c7363431514364e04 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_56ee02d70710280f1f8618f11e8ede24 = $(`<div id="html_56ee02d70710280f1f8618f11e8ede24" style="width: 100.0%; height: 100.0%;"><b>[AI 추천 핫플]</b><br><b>★ 아뜰리에남산</b><br>Pacer 핫플 - 테마: 화사한 대화를 나눠요 <br>주소: 서울특별시 용산구 용산동2가 34-20 3층 (주차불가)</div>`)[0];
+                popup_3406e4a5a4b8f62c7363431514364e04.setContent(html_56ee02d70710280f1f8618f11e8ede24);
+            
+        
+
+        marker_078634c2f06ca7c343ad888c2d670bb9.bindPopup(popup_3406e4a5a4b8f62c7363431514364e04)
+        ;
+
+        
+    
+    
+            marker_078634c2f06ca7c343ad888c2d670bb9.bindTooltip(
+                `<div>
+                     6단계: ★ 아뜰리에남산
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_078634c2f06ca7c343ad888c2d670bb9.setIcon(icon_27834076cf6e3a9ac192902dae92c825);
+            
+    
+            var marker_8b76d866df55410d5ff3e0b885278d75 = L.marker(
+                [37.54472922, 126.9831433],
+                {
+}
+            ).addTo(map_ae2eecc5182089a915c0c4e1dca5c2bf);
+        
+    
+            var icon_092fcc481ba548e7e5f1b6bd7d67b843 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_13c0beb9d7bca8343a0c248f137cc732 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_38121ebb6edc075de2681b49f27ae8d8 = $(`<div id="html_38121ebb6edc075de2681b49f27ae8d8" style="width: 100.0%; height: 100.0%;"><b>[AI 창조 관광지]</b><br><b>7. 스토리지북앤필름</b><br>주소: 서울특별시 용산구 신흥로 115-1 (용산동2가)</div>`)[0];
+                popup_13c0beb9d7bca8343a0c248f137cc732.setContent(html_38121ebb6edc075de2681b49f27ae8d8);
+            
+        
+
+        marker_8b76d866df55410d5ff3e0b885278d75.bindPopup(popup_13c0beb9d7bca8343a0c248f137cc732)
+        ;
+
+        
+    
+    
+            marker_8b76d866df55410d5ff3e0b885278d75.bindTooltip(
+                `<div>
+                     7단계: 스토리지북앤필름
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_8b76d866df55410d5ff3e0b885278d75.setIcon(icon_092fcc481ba548e7e5f1b6bd7d67b843);
+            
+    
+            var marker_2197cc2a7f6b0e8630d1c2629c3dcbca = L.marker(
+                [37.5475028, 126.9840104],
+                {
+}
+            ).addTo(map_ae2eecc5182089a915c0c4e1dca5c2bf);
+        
+    
+            var icon_f06bf3bf2bbfdc2791354fa40df6bbb4 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "cutlery",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a5e27383a11ea8a74c81314bb68ddb49 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_515d435e81494b4d327ea4593f96eeaf = $(`<div id="html_515d435e81494b4d327ea4593f96eeaf" style="width: 100.0%; height: 100.0%;"><b>[AI 추천 핫플]</b><br><b>★ 더백푸드트럭</b><br>Pacer 핫플 - 테마: 육즙이 좔좔 수제 패티<br>주소: 서울특별시 용산구 후암동 406-55 1,2층 전체</div>`)[0];
+                popup_a5e27383a11ea8a74c81314bb68ddb49.setContent(html_515d435e81494b4d327ea4593f96eeaf);
+            
+        
+
+        marker_2197cc2a7f6b0e8630d1c2629c3dcbca.bindPopup(popup_a5e27383a11ea8a74c81314bb68ddb49)
+        ;
+
+        
+    
+    
+            marker_2197cc2a7f6b0e8630d1c2629c3dcbca.bindTooltip(
+                `<div>
+                     8단계: ★ 더백푸드트럭
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_2197cc2a7f6b0e8630d1c2629c3dcbca.setIcon(icon_f06bf3bf2bbfdc2791354fa40df6bbb4);
+            
+    
+            var marker_ec33aaa5a545951908fc42f82cffcc8c = L.marker(
+                [37.55179136, 126.9876322],
+                {
+}
+            ).addTo(map_ae2eecc5182089a915c0c4e1dca5c2bf);
+        
+    
+            var icon_30ab8ae494dde96219fa39fcd6eb7580 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_78c19f35ba6e01e991ac524b544ba0f5 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_65e69b3d349c84f05f1ab369c5df436a = $(`<div id="html_65e69b3d349c84f05f1ab369c5df436a" style="width: 100.0%; height: 100.0%;"><b>[AI 창조 관광지]</b><br><b>9. 남산 팔각정</b><br>주소: 서울특별시 중구 예장동 8-1</div>`)[0];
+                popup_78c19f35ba6e01e991ac524b544ba0f5.setContent(html_65e69b3d349c84f05f1ab369c5df436a);
+            
+        
+
+        marker_ec33aaa5a545951908fc42f82cffcc8c.bindPopup(popup_78c19f35ba6e01e991ac524b544ba0f5)
+        ;
+
+        
+    
+    
+            marker_ec33aaa5a545951908fc42f82cffcc8c.bindTooltip(
+                `<div>
+                     9단계: 남산 팔각정
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_ec33aaa5a545951908fc42f82cffcc8c.setIcon(icon_30ab8ae494dde96219fa39fcd6eb7580);
+            
+    
+            ant_path_95d70c1340079f9e9ceeb1b1bbcb6d42 = L.polyline.antPath(
+              [[37.53846127, 126.9992941], [37.54006435, 126.9938552], [37.54026621, 126.9915273], [37.54107944, 126.9913363], [37.54164344, 126.9871174], [37.54327968, 126.9850528], [37.54472922, 126.9831433], [37.5475028, 126.9840104], [37.55179136, 126.9876322]],
+              {
+  "stroke": true,
+  "color": "crimson",
+  "weight": 5,
+  "opacity": 0.5,
+  "lineCap": "round",
+  "lineJoin": "round",
+  "dashArray": [
+10,
+20,
+],
+  "dashOffset": null,
+  "fill": false,
+  "fillColor": "crimson",
+  "fillOpacity": 0.2,
+  "fillRule": "evenodd",
+  "bubblingMouseEvents": true,
+  "smoothFactor": 1.0,
+  "noClip": false,
+  "paused": false,
+  "reverse": false,
+  "hardwareAcceleration": false,
+  "delay": 1000,
+  "pulseColor": "white",
+}
+        ).addTo(map_ae2eecc5182089a915c0c4e1dca5c2bf);
+        
+</script>
+</html>

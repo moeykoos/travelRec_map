@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_39b9c23cc2f2ca45f6e69fc3ae3bc418 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+    <script src="https://cdn.jsdelivr.net/npm/leaflet-ant-path@1.1.2/dist/leaflet-ant-path.min.js"></script>
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_39b9c23cc2f2ca45f6e69fc3ae3bc418" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_39b9c23cc2f2ca45f6e69fc3ae3bc418 = L.map(
+                "map_39b9c23cc2f2ca45f6e69fc3ae3bc418",
+                {
+                    center: [37.51965256, 127.0227423],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 15,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_5eaa9d2c6c867c1cc87ce8752bca194a = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_5eaa9d2c6c867c1cc87ce8752bca194a.addTo(map_39b9c23cc2f2ca45f6e69fc3ae3bc418);
+        
+    
+            var marker_5b2ac617d6e040eb0ea6a7bc96b8b9c0 = L.marker(
+                [37.51965256, 127.0227423],
+                {
+}
+            ).addTo(map_39b9c23cc2f2ca45f6e69fc3ae3bc418);
+        
+    
+            var icon_7a5664f69cf1be606e9787e183ce95f1 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "darkblue",
+  "iconColor": "white",
+  "icon": "play",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_79caa6d31a163378f877f1e1d6b969ff = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_a670e2d9beb2a7492dc5a24db304d187 = $(`<div id="html_a670e2d9beb2a7492dc5a24db304d187" style="width: 100.0%; height: 100.0%;"><b>🛫 [출발지]</b><br><b>신사동 가로수길</b><br>주소: 서울특별시 강남구 가로수길 23 (신사동)</div>`)[0];
+                popup_79caa6d31a163378f877f1e1d6b969ff.setContent(html_a670e2d9beb2a7492dc5a24db304d187);
+            
+        
+
+        marker_5b2ac617d6e040eb0ea6a7bc96b8b9c0.bindPopup(popup_79caa6d31a163378f877f1e1d6b969ff)
+        ;
+
+        
+    
+    
+            marker_5b2ac617d6e040eb0ea6a7bc96b8b9c0.bindTooltip(
+                `<div>
+                     1단계: 신사동 가로수길
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_5b2ac617d6e040eb0ea6a7bc96b8b9c0.setIcon(icon_7a5664f69cf1be606e9787e183ce95f1);
+            
+    
+            var marker_1e4879a379d4f7e3b9981c3ee61eebc4 = L.marker(
+                [37.51241224, 127.0188537],
+                {
+}
+            ).addTo(map_39b9c23cc2f2ca45f6e69fc3ae3bc418);
+        
+    
+            var icon_49b17477ba8eb81febce19ac4ac74ca7 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "cutlery",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_1bb417ed18b963f5b8d0b601e508199d = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_2a458ae7490ee80aba96b6afe96c0f26 = $(`<div id="html_2a458ae7490ee80aba96b6afe96c0f26" style="width: 100.0%; height: 100.0%;"><b>[AI 추천 핫플]</b><br><b>★ 무한쌈밥집</b><br>Pacer 핫플 - 테마: 쌀 수록 더 맛있어져요<br>주소: 서울특별시 서초구 잠원동 36-27</div>`)[0];
+                popup_1bb417ed18b963f5b8d0b601e508199d.setContent(html_2a458ae7490ee80aba96b6afe96c0f26);
+            
+        
+
+        marker_1e4879a379d4f7e3b9981c3ee61eebc4.bindPopup(popup_1bb417ed18b963f5b8d0b601e508199d)
+        ;
+
+        
+    
+    
+            marker_1e4879a379d4f7e3b9981c3ee61eebc4.bindTooltip(
+                `<div>
+                     2단계: ★ 무한쌈밥집
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_1e4879a379d4f7e3b9981c3ee61eebc4.setIcon(icon_49b17477ba8eb81febce19ac4ac74ca7);
+            
+    
+            var marker_191c013e2ca3de8e3d6dc5d805fce5fa = L.marker(
+                [37.50514468, 127.0133591],
+                {
+}
+            ).addTo(map_39b9c23cc2f2ca45f6e69fc3ae3bc418);
+        
+    
+            var icon_6fb37b9b72395818f65cf1330c67e21a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_6f734fbc831ed4c47f28c74348432cb8 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_65677c8b849364257e03efad8c912b8d = $(`<div id="html_65677c8b849364257e03efad8c912b8d" style="width: 100.0%; height: 100.0%;"><b>[AI 창조 관광지]</b><br><b>3. 반포대교 달빛무지개분수</b><br>주소: 서울특별시 서초구 반포동</div>`)[0];
+                popup_6f734fbc831ed4c47f28c74348432cb8.setContent(html_65677c8b849364257e03efad8c912b8d);
+            
+        
+
+        marker_191c013e2ca3de8e3d6dc5d805fce5fa.bindPopup(popup_6f734fbc831ed4c47f28c74348432cb8)
+        ;
+
+        
+    
+    
+            marker_191c013e2ca3de8e3d6dc5d805fce5fa.bindTooltip(
+                `<div>
+                     3단계: 반포대교 달빛무지개분수
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_191c013e2ca3de8e3d6dc5d805fce5fa.setIcon(icon_6fb37b9b72395818f65cf1330c67e21a);
+            
+    
+            var marker_4ceedf566cfe689505782c42d46ad9bf = L.marker(
+                [37.50238611, 127.0111987],
+                {
+}
+            ).addTo(map_39b9c23cc2f2ca45f6e69fc3ae3bc418);
+        
+    
+            var icon_db8e64a7c4ddee019e6dec9a9d968d8d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "cutlery",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_02d23aed504bef9e17e69fe38188acb8 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_2bb258c172cbc89bef89c21d1db8e3e9 = $(`<div id="html_2bb258c172cbc89bef89c21d1db8e3e9" style="width: 100.0%; height: 100.0%;"><b>[AI 추천 핫플]</b><br><b>★ 바운스트램폴린파크 반포센터</b><br>Pacer 핫플 - 테마: 매일이 어린이날! 키즈<br>주소: 서울특별시 서초구 반포동 52-1 쌍동빌딩 5층</div>`)[0];
+                popup_02d23aed504bef9e17e69fe38188acb8.setContent(html_2bb258c172cbc89bef89c21d1db8e3e9);
+            
+        
+
+        marker_4ceedf566cfe689505782c42d46ad9bf.bindPopup(popup_02d23aed504bef9e17e69fe38188acb8)
+        ;
+
+        
+    
+    
+            marker_4ceedf566cfe689505782c42d46ad9bf.bindTooltip(
+                `<div>
+                     4단계: ★ 바운스트램폴린파크 반포센터
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_4ceedf566cfe689505782c42d46ad9bf.setIcon(icon_db8e64a7c4ddee019e6dec9a9d968d8d);
+            
+    
+            var marker_f8264dea3c4358b6faddbf2e280edcca = L.marker(
+                [37.50514468, 127.0133591],
+                {
+}
+            ).addTo(map_39b9c23cc2f2ca45f6e69fc3ae3bc418);
+        
+    
+            var icon_1ad1aaab1e9a634f8c2146d8ecfc5781 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_8f555cb2b33885e8ec81834ac181785e = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_5e272f6d2d620bda5f8e3fb94e1f8dee = $(`<div id="html_5e272f6d2d620bda5f8e3fb94e1f8dee" style="width: 100.0%; height: 100.0%;"><b>[AI 창조 관광지]</b><br><b>5. 서래마을</b><br>주소: 서울특별시 서초구 반포동</div>`)[0];
+                popup_8f555cb2b33885e8ec81834ac181785e.setContent(html_5e272f6d2d620bda5f8e3fb94e1f8dee);
+            
+        
+
+        marker_f8264dea3c4358b6faddbf2e280edcca.bindPopup(popup_8f555cb2b33885e8ec81834ac181785e)
+        ;
+
+        
+    
+    
+            marker_f8264dea3c4358b6faddbf2e280edcca.bindTooltip(
+                `<div>
+                     5단계: 서래마을
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_f8264dea3c4358b6faddbf2e280edcca.setIcon(icon_1ad1aaab1e9a634f8c2146d8ecfc5781);
+            
+    
+            var marker_02231f4f0fdfde41a0df001d5508444d = L.marker(
+                [37.50189982, 127.010449],
+                {
+}
+            ).addTo(map_39b9c23cc2f2ca45f6e69fc3ae3bc418);
+        
+    
+            var icon_37d1f4fc5944de347ac7018928f43a6f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "cutlery",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_7c90b103d8b40b135ba0288c96693cb9 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_20dce2d3191c5af579b739344a01d469 = $(`<div id="html_20dce2d3191c5af579b739344a01d469" style="width: 100.0%; height: 100.0%;"><b>[AI 추천 핫플]</b><br><b>★ 마루심 반포점</b><br>Pacer 핫플 - 테마: 내 안의 힘이 솟구친다<br>주소: 서울특별시 서초구 반포동 54-10 청구빌딩 1층</div>`)[0];
+                popup_7c90b103d8b40b135ba0288c96693cb9.setContent(html_20dce2d3191c5af579b739344a01d469);
+            
+        
+
+        marker_02231f4f0fdfde41a0df001d5508444d.bindPopup(popup_7c90b103d8b40b135ba0288c96693cb9)
+        ;
+
+        
+    
+    
+            marker_02231f4f0fdfde41a0df001d5508444d.bindTooltip(
+                `<div>
+                     6단계: ★ 마루심 반포점
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_02231f4f0fdfde41a0df001d5508444d.setIcon(icon_37d1f4fc5944de347ac7018928f43a6f);
+            
+    
+            var marker_8b362f02ad11b20d4671d5feaf9ca2b9 = L.marker(
+                [37.4974226, 127.0032279],
+                {
+}
+            ).addTo(map_39b9c23cc2f2ca45f6e69fc3ae3bc418);
+        
+    
+            var icon_85b41216a23dad2827301394715f1c9d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_3acacd2272c49bd3db18808cc23504ef = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_de5588b913219f8833f0b3e1ad1aae93 = $(`<div id="html_de5588b913219f8833f0b3e1ad1aae93" style="width: 100.0%; height: 100.0%;"><b>[AI 창조 관광지]</b><br><b>7. 몽마르뜨공원</b><br>주소: 서울특별시 서초구 반포대로 201 (반포동)</div>`)[0];
+                popup_3acacd2272c49bd3db18808cc23504ef.setContent(html_de5588b913219f8833f0b3e1ad1aae93);
+            
+        
+
+        marker_8b362f02ad11b20d4671d5feaf9ca2b9.bindPopup(popup_3acacd2272c49bd3db18808cc23504ef)
+        ;
+
+        
+    
+    
+            marker_8b362f02ad11b20d4671d5feaf9ca2b9.bindTooltip(
+                `<div>
+                     7단계: 몽마르뜨공원
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_8b362f02ad11b20d4671d5feaf9ca2b9.setIcon(icon_85b41216a23dad2827301394715f1c9d);
+            
+    
+            var marker_a0e5668944aae2285faf36367a299904 = L.marker(
+                [37.50391368, 127.0063297],
+                {
+}
+            ).addTo(map_39b9c23cc2f2ca45f6e69fc3ae3bc418);
+        
+    
+            var icon_c5a691e6e1051c718383f6aa2805d7f8 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "cutlery",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_9f4aaece54d7dfcb798e2c69ed979e8c = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_6778048499c8d61bff57f92b1dab8180 = $(`<div id="html_6778048499c8d61bff57f92b1dab8180" style="width: 100.0%; height: 100.0%;"><b>[AI 추천 핫플]</b><br><b>★ 차알 파미에스테이션점</b><br>Pacer 핫플 - 테마: 마라탕 먹는 걸 망설이<br>주소: 서울특별시 서초구 반포동 118-3 파미에스테이션 2층</div>`)[0];
+                popup_9f4aaece54d7dfcb798e2c69ed979e8c.setContent(html_6778048499c8d61bff57f92b1dab8180);
+            
+        
+
+        marker_a0e5668944aae2285faf36367a299904.bindPopup(popup_9f4aaece54d7dfcb798e2c69ed979e8c)
+        ;
+
+        
+    
+    
+            marker_a0e5668944aae2285faf36367a299904.bindTooltip(
+                `<div>
+                     8단계: ★ 차알 파미에스테이션점
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_a0e5668944aae2285faf36367a299904.setIcon(icon_c5a691e6e1051c718383f6aa2805d7f8);
+            
+    
+            var marker_f9d1c6589d007ac83dfa5b48be25d3c9 = L.marker(
+                [37.5124362, 126.9959623],
+                {
+}
+            ).addTo(map_39b9c23cc2f2ca45f6e69fc3ae3bc418);
+        
+    
+            var icon_2a1541897ccebbc7f0df7b345f3082d7 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_200ca7d48ca1710ec3954e39c8ad6a25 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_50bc089f43d5e1206b7d54db85fb5bdd = $(`<div id="html_50bc089f43d5e1206b7d54db85fb5bdd" style="width: 100.0%; height: 100.0%;"><b>[AI 창조 관광지]</b><br><b>9. 세빛섬</b><br>주소: 서울특별시 서초구 올림픽대로 2085-14 (반포동)</div>`)[0];
+                popup_200ca7d48ca1710ec3954e39c8ad6a25.setContent(html_50bc089f43d5e1206b7d54db85fb5bdd);
+            
+        
+
+        marker_f9d1c6589d007ac83dfa5b48be25d3c9.bindPopup(popup_200ca7d48ca1710ec3954e39c8ad6a25)
+        ;
+
+        
+    
+    
+            marker_f9d1c6589d007ac83dfa5b48be25d3c9.bindTooltip(
+                `<div>
+                     9단계: 세빛섬
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_f9d1c6589d007ac83dfa5b48be25d3c9.setIcon(icon_2a1541897ccebbc7f0df7b345f3082d7);
+            
+    
+            ant_path_1b0eda21bfe4d25bf486087549fe001e = L.polyline.antPath(
+              [[37.51965256, 127.0227423], [37.51241224, 127.0188537], [37.50514468, 127.0133591], [37.50238611, 127.0111987], [37.50514468, 127.0133591], [37.50189982, 127.010449], [37.4974226, 127.0032279], [37.50391368, 127.0063297], [37.5124362, 126.9959623]],
+              {
+  "stroke": true,
+  "color": "crimson",
+  "weight": 5,
+  "opacity": 0.5,
+  "lineCap": "round",
+  "lineJoin": "round",
+  "dashArray": [
+10,
+20,
+],
+  "dashOffset": null,
+  "fill": false,
+  "fillColor": "crimson",
+  "fillOpacity": 0.2,
+  "fillRule": "evenodd",
+  "bubblingMouseEvents": true,
+  "smoothFactor": 1.0,
+  "noClip": false,
+  "paused": false,
+  "reverse": false,
+  "hardwareAcceleration": false,
+  "delay": 1000,
+  "pulseColor": "white",
+}
+        ).addTo(map_39b9c23cc2f2ca45f6e69fc3ae3bc418);
+        
+</script>
+</html>

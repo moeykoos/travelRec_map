@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_c5584ac2b9a263a8f7cf6af057d2502d {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+    <script src="https://cdn.jsdelivr.net/npm/leaflet-ant-path@1.1.2/dist/leaflet-ant-path.min.js"></script>
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_c5584ac2b9a263a8f7cf6af057d2502d" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_c5584ac2b9a263a8f7cf6af057d2502d = L.map(
+                "map_c5584ac2b9a263a8f7cf6af057d2502d",
+                {
+                    center: [37.57921394, 126.9732297],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 15,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_ac2ef77f1ed9fbfdab85db5caae51505 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_ac2ef77f1ed9fbfdab85db5caae51505.addTo(map_c5584ac2b9a263a8f7cf6af057d2502d);
+        
+    
+            var marker_7f8074709883a4d9b216948e4e6e142c = L.marker(
+                [37.57921394, 126.9732297],
+                {
+}
+            ).addTo(map_c5584ac2b9a263a8f7cf6af057d2502d);
+        
+    
+            var icon_3266e47e9c774f7118e8bea6e687b6af = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "darkblue",
+  "iconColor": "white",
+  "icon": "play",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_38d08b21710dc5a21c15ec1bbfffdfcf = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_7561adc78c3900d4b7894ee6cde78ff2 = $(`<div id="html_7561adc78c3900d4b7894ee6cde78ff2" style="width: 100.0%; height: 100.0%;"><b>🛫 [출발지]</b><br><b>팔레 드 서울</b><br>주소: 서울특별시 종로구 자하문로10길 30</div>`)[0];
+                popup_38d08b21710dc5a21c15ec1bbfffdfcf.setContent(html_7561adc78c3900d4b7894ee6cde78ff2);
+            
+        
+
+        marker_7f8074709883a4d9b216948e4e6e142c.bindPopup(popup_38d08b21710dc5a21c15ec1bbfffdfcf)
+        ;
+
+        
+    
+    
+            marker_7f8074709883a4d9b216948e4e6e142c.bindTooltip(
+                `<div>
+                     1단계: 팔레 드 서울
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_7f8074709883a4d9b216948e4e6e142c.setIcon(icon_3266e47e9c774f7118e8bea6e687b6af);
+            
+    
+            var marker_d349194031b43f1e064e254a2e97f96d = L.marker(
+                [37.57748594, 126.9732917],
+                {
+}
+            ).addTo(map_c5584ac2b9a263a8f7cf6af057d2502d);
+        
+    
+            var icon_052480eac6810be3dea6c80d461da938 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "cutlery",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e2e157c8033c241f0fa3a47d826771a3 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_56978d3e1c72b8f679090bb3186d1b86 = $(`<div id="html_56978d3e1c72b8f679090bb3186d1b86" style="width: 100.0%; height: 100.0%;"><b>[AI 추천 핫플]</b><br><b>★ 대림미술관</b><br>Pacer 핫플 - 테마: 미술관 vs 박물관 부<br>주소: 서울특별시 종로구 통의동 35-1 대림미술관</div>`)[0];
+                popup_e2e157c8033c241f0fa3a47d826771a3.setContent(html_56978d3e1c72b8f679090bb3186d1b86);
+            
+        
+
+        marker_d349194031b43f1e064e254a2e97f96d.bindPopup(popup_e2e157c8033c241f0fa3a47d826771a3)
+        ;
+
+        
+    
+    
+            marker_d349194031b43f1e064e254a2e97f96d.bindTooltip(
+                `<div>
+                     2단계: ★ 대림미술관
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_d349194031b43f1e064e254a2e97f96d.setIcon(icon_052480eac6810be3dea6c80d461da938);
+            
+    
+            var marker_0fbc733aef456fafa4dc29908688dcef = L.marker(
+                [37.57590409, 126.9768421],
+                {
+}
+            ).addTo(map_c5584ac2b9a263a8f7cf6af057d2502d);
+        
+    
+            var icon_d74a01dec9f6b4944c692a98b57d1b7d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_14d4699b6ddf90ee06e52938f519d576 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_e60dc688392b2402a3a4aea5913f18ee = $(`<div id="html_e60dc688392b2402a3a4aea5913f18ee" style="width: 100.0%; height: 100.0%;"><b>[AI 창조 관광지]</b><br><b>3. 광화문</b><br>주소: 서울특별시 종로구 사직로 161</div>`)[0];
+                popup_14d4699b6ddf90ee06e52938f519d576.setContent(html_e60dc688392b2402a3a4aea5913f18ee);
+            
+        
+
+        marker_0fbc733aef456fafa4dc29908688dcef.bindPopup(popup_14d4699b6ddf90ee06e52938f519d576)
+        ;
+
+        
+    
+    
+            marker_0fbc733aef456fafa4dc29908688dcef.bindTooltip(
+                `<div>
+                     3단계: 광화문
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_0fbc733aef456fafa4dc29908688dcef.setIcon(icon_d74a01dec9f6b4944c692a98b57d1b7d);
+            
+    
+            var marker_f7ee720448a0d541024b7953669507d4 = L.marker(
+                [37.57391905, 126.9779259],
+                {
+}
+            ).addTo(map_c5584ac2b9a263a8f7cf6af057d2502d);
+        
+    
+            var icon_72097de14c98bbfc3c6cd5064570337d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "cutlery",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_015f4a6c76382e7a679eb4f6d186193b = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_19d232977a793ea51391a815139d3f45 = $(`<div id="html_19d232977a793ea51391a815139d3f45" style="width: 100.0%; height: 100.0%;"><b>[AI 추천 핫플]</b><br><b>★ 대한민국역사박물관</b><br>Pacer 핫플 - 테마: 미술관 vs 박물관 부<br>주소: 서울특별시 종로구 세종로 82-1 대한민국역사박물관</div>`)[0];
+                popup_015f4a6c76382e7a679eb4f6d186193b.setContent(html_19d232977a793ea51391a815139d3f45);
+            
+        
+
+        marker_f7ee720448a0d541024b7953669507d4.bindPopup(popup_015f4a6c76382e7a679eb4f6d186193b)
+        ;
+
+        
+    
+    
+            marker_f7ee720448a0d541024b7953669507d4.bindTooltip(
+                `<div>
+                     4단계: ★ 대한민국역사박물관
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_f7ee720448a0d541024b7953669507d4.setIcon(icon_72097de14c98bbfc3c6cd5064570337d);
+            
+    
+            var marker_f5b7752a3293298f430a4ed84be8af90 = L.marker(
+                [37.57590409, 126.9768421],
+                {
+}
+            ).addTo(map_c5584ac2b9a263a8f7cf6af057d2502d);
+        
+    
+            var icon_1770756668326496d2f5c9a136fde02b = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_5ba145b208c3dbb1c067d17f758f7655 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_42b387b4d0ecce55b5513cab13b0c7d3 = $(`<div id="html_42b387b4d0ecce55b5513cab13b0c7d3" style="width: 100.0%; height: 100.0%;"><b>[AI 창조 관광지]</b><br><b>5. 경복궁</b><br>주소: 서울특별시 종로구 사직로 161 (세종로)</div>`)[0];
+                popup_5ba145b208c3dbb1c067d17f758f7655.setContent(html_42b387b4d0ecce55b5513cab13b0c7d3);
+            
+        
+
+        marker_f5b7752a3293298f430a4ed84be8af90.bindPopup(popup_5ba145b208c3dbb1c067d17f758f7655)
+        ;
+
+        
+    
+    
+            marker_f5b7752a3293298f430a4ed84be8af90.bindTooltip(
+                `<div>
+                     5단계: 경복궁
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_f5b7752a3293298f430a4ed84be8af90.setIcon(icon_1770756668326496d2f5c9a136fde02b);
+            
+    
+            var marker_d5a0ec440ddf64ec657e38006522d495 = L.marker(
+                [37.57540187, 126.9797592],
+                {
+}
+            ).addTo(map_c5584ac2b9a263a8f7cf6af057d2502d);
+        
+    
+            var icon_4541e672b50745748886b861965b1a0a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "cutlery",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_dbb35c555be49e817ab01ea63082297f = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_9cde457a5bfec3dea4a3f85ad1d9a3f3 = $(`<div id="html_9cde457a5bfec3dea4a3f85ad1d9a3f3" style="width: 100.0%; height: 100.0%;"><b>[AI 추천 핫플]</b><br><b>★ 모도우 광화문점</b><br>Pacer 핫플 - 테마: 우직하게 한점씩, 한우<br>주소: 서울특별시 종로구 중학동 14 트윈트리타워 B동 M층</div>`)[0];
+                popup_dbb35c555be49e817ab01ea63082297f.setContent(html_9cde457a5bfec3dea4a3f85ad1d9a3f3);
+            
+        
+
+        marker_d5a0ec440ddf64ec657e38006522d495.bindPopup(popup_dbb35c555be49e817ab01ea63082297f)
+        ;
+
+        
+    
+    
+            marker_d5a0ec440ddf64ec657e38006522d495.bindTooltip(
+                `<div>
+                     6단계: ★ 모도우 광화문점
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_d5a0ec440ddf64ec657e38006522d495.setIcon(icon_4541e672b50745748886b861965b1a0a);
+            
+    
+            var marker_86b881a26087287f182a565a7adbd7f2 = L.marker(
+                [37.57590409, 126.9768421],
+                {
+}
+            ).addTo(map_c5584ac2b9a263a8f7cf6af057d2502d);
+        
+    
+            var icon_7a11ccf35914e29b576018ca39dbe005 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_8bb47332422f3dfeea51133993c82e2f = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_d107aa8c0157067994e9678fc3258bae = $(`<div id="html_d107aa8c0157067994e9678fc3258bae" style="width: 100.0%; height: 100.0%;"><b>[AI 창조 관광지]</b><br><b>7. 건청궁</b><br>주소: 서울특별시 종로구 사직로 161 (세종로)</div>`)[0];
+                popup_8bb47332422f3dfeea51133993c82e2f.setContent(html_d107aa8c0157067994e9678fc3258bae);
+            
+        
+
+        marker_86b881a26087287f182a565a7adbd7f2.bindPopup(popup_8bb47332422f3dfeea51133993c82e2f)
+        ;
+
+        
+    
+    
+            marker_86b881a26087287f182a565a7adbd7f2.bindTooltip(
+                `<div>
+                     7단계: 건청궁
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_86b881a26087287f182a565a7adbd7f2.setIcon(icon_7a11ccf35914e29b576018ca39dbe005);
+            
+    
+            var marker_b5078a8fe9fb7ba9e188b4d18befe8ba = L.marker(
+                [37.57805144, 126.9798328],
+                {
+}
+            ).addTo(map_c5584ac2b9a263a8f7cf6af057d2502d);
+        
+    
+            var icon_ebef28f1f0cf94891d1c4434e2ca9754 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "cutlery",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_1b84574445e75403b9cd4e4ffc7722c2 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_cf4a95f40818876746c0c3ce7a773ed0 = $(`<div id="html_cf4a95f40818876746c0c3ce7a773ed0" style="width: 100.0%; height: 100.0%;"><b>[AI 추천 핫플]</b><br><b>★ 널담은공간 경복궁점</b><br>Pacer 핫플 - 테마: 자연으로 채운 식사, <br>주소: 서울특별시 종로구 사간동 65-1</div>`)[0];
+                popup_1b84574445e75403b9cd4e4ffc7722c2.setContent(html_cf4a95f40818876746c0c3ce7a773ed0);
+            
+        
+
+        marker_b5078a8fe9fb7ba9e188b4d18befe8ba.bindPopup(popup_1b84574445e75403b9cd4e4ffc7722c2)
+        ;
+
+        
+    
+    
+            marker_b5078a8fe9fb7ba9e188b4d18befe8ba.bindTooltip(
+                `<div>
+                     8단계: ★ 널담은공간 경복궁점
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_b5078a8fe9fb7ba9e188b4d18befe8ba.setIcon(icon_ebef28f1f0cf94891d1c4434e2ca9754);
+            
+    
+            var marker_b08c0a92e76b0929e2f3e29cce943c30 = L.marker(
+                [37.58007909, 126.9806686],
+                {
+}
+            ).addTo(map_c5584ac2b9a263a8f7cf6af057d2502d);
+        
+    
+            var icon_23e6096cdf8e9cdf7dbe129e74eb8bc4 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_d106d8ab51c830b05ffe05846320abf5 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_cf8c3e051a0d67af8c9d6ec3a66c5571 = $(`<div id="html_cf8c3e051a0d67af8c9d6ec3a66c5571" style="width: 100.0%; height: 100.0%;"><b>[AI 창조 관광지]</b><br><b>9. 황생가칼국수</b><br>주소: 서울특별시 종로구 북촌로5길 78</div>`)[0];
+                popup_d106d8ab51c830b05ffe05846320abf5.setContent(html_cf8c3e051a0d67af8c9d6ec3a66c5571);
+            
+        
+
+        marker_b08c0a92e76b0929e2f3e29cce943c30.bindPopup(popup_d106d8ab51c830b05ffe05846320abf5)
+        ;
+
+        
+    
+    
+            marker_b08c0a92e76b0929e2f3e29cce943c30.bindTooltip(
+                `<div>
+                     9단계: 황생가칼국수
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_b08c0a92e76b0929e2f3e29cce943c30.setIcon(icon_23e6096cdf8e9cdf7dbe129e74eb8bc4);
+            
+    
+            ant_path_0e135d75a481d24f555c492df4d45dfe = L.polyline.antPath(
+              [[37.57921394, 126.9732297], [37.57748594, 126.9732917], [37.57590409, 126.9768421], [37.57391905, 126.9779259], [37.57590409, 126.9768421], [37.57540187, 126.9797592], [37.57590409, 126.9768421], [37.57805144, 126.9798328], [37.58007909, 126.9806686]],
+              {
+  "stroke": true,
+  "color": "crimson",
+  "weight": 5,
+  "opacity": 0.5,
+  "lineCap": "round",
+  "lineJoin": "round",
+  "dashArray": [
+10,
+20,
+],
+  "dashOffset": null,
+  "fill": false,
+  "fillColor": "crimson",
+  "fillOpacity": 0.2,
+  "fillRule": "evenodd",
+  "bubblingMouseEvents": true,
+  "smoothFactor": 1.0,
+  "noClip": false,
+  "paused": false,
+  "reverse": false,
+  "hardwareAcceleration": false,
+  "delay": 1000,
+  "pulseColor": "white",
+}
+        ).addTo(map_c5584ac2b9a263a8f7cf6af057d2502d);
+        
+</script>
+</html>
